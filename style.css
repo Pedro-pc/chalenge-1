@@ -1,0 +1,303 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url(assets/fonts/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url(assets/fonts/Roboto-Bold.ttf) format('truetype');
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: hsl(234, 29%, 20%);
+}
+main{
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 100%;
+    max-height: 645px;
+    max-width: 58.125rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+main .section-image{
+    flex: 1;
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+main .section-form{
+    flex: 1;
+    padding: 0px 70px 0px 45px;
+}
+main .section-form h1{
+    font-family: 'Roboto Bold';
+    font-size: 2.5rem;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 40px;
+}
+main .section-form p{
+    font-family: 'Roboto Regular';
+    color: hsl(235, 18%, 26%);
+    /*width: 80%;*/
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+main .section-form ul{
+    margin-bottom: 45px;
+}
+main .section-form ul > li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-family: 'Roboto Regular';
+}
+main .section-form form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+main .section-form form input{
+    width: 20rem;
+    height: 50px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid hsl(231, 7%, 60%);
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+main .section-form form input.erro{
+    border: 1px solid hsl(4, 100%, 67%);
+    background-color: #ffe8e6;
+    color: hsl(4, 100%, 67%);
+}
+main .section-form form .message-erro{
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+main .section-form form .message-erro .message-erro-text{
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
+    color: hsl(4, 100%, 67%);
+    display: none;
+}
+main .section-form form label{
+    font-family: 'Roboto Bold';
+    color: hsl(234, 29%, 20%);
+}
+main .section-form form button{
+    width: 20rem;
+    height: 50px;
+    border-radius: 8px;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Roboto Regular';
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+main .section-form form button:hover{
+    background-image: linear-gradient(to right, hsl(347, 100%, 66%), hsl(4, 100%, 67%));
+}
+/*MENSSAGEM DE SUCESSO*/
+.msg-sucess{
+    background-color: hsl(0, 0%, 100%);
+    display: none;
+    flex-direction: column;
+    width: 31.5625rem;
+    height: 32.5rem;
+    border-radius: 50px;
+    padding: 70px;
+}
+.msg-sucess img{
+    width: 80px;
+    
+}
+.msg-sucess .msg-sucess-title{
+    font-family: 'Roboto Bold';
+    font-size: 2.8125rem;
+    color: hsl(234, 29%, 20%);
+    margin-top: 20px;
+}
+.msg-sucess .msg-sucess-text{
+    font-family: 'Roboto Regular';
+    color: hsl(235, 18%, 26%);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.msg-sucess button{
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Roboto Regular';
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.msg-sucess .msg-sucess-text span{
+    font-family: 'Roboto Bold';
+}
+.msg-sucess button:hover{
+    background-image: linear-gradient(to right, hsl(347, 100%, 66%), hsl(4, 100%, 67%));
+}
+/*MEDIA QUERY*/
+@media only screen and (max-width: 980px) and (min-width: 760px){
+    main{
+        max-height: 645px;
+        max-width: 700px;
+        
+    }
+    main .section-form{
+        padding: 0px 40px 0px 15px;
+    }
+    main .section-form form button{
+        margin-bottom: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 760px) and (min-width:560px) {
+    body{
+        background-color: hsl(0, 0%, 100%);
+    }
+    main{
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        border-radius: 0;
+        margin-top: 0;
+    }
+    main .section-form{
+        flex: none;
+        padding: 0px 25px 0px 25px;
+    }
+    main .section-image{
+        flex: none;
+        height: 40%;
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0 0 20px 20px;
+    }
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        margin-top: 100px; 
+        font-family: 'Roboto regular';
+        display: none;
+    }
+}
+@media only screen and (max-width: 560px){
+    body{
+        background-color: hsl(0, 0%, 100%);
+    }
+    main{
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 0 0px 0;
+        border-radius: 0;
+        margin-top: 0;
+    }
+    main .section-form{
+        flex:none;
+        padding: 0px 25px 0px 25px;
+    }
+    main .section-image{
+        flex:none;
+        height: 40%;
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*width: 100%;
+        height: 100%;*/
+        border-radius: 0 0 20px 20px;
+    }
+    main .section-form form input{
+        width: 100%;
+        
+    }
+    main .section-form form button{
+        width: 100%;
+        height: 50px;
+        margin-bottom: 50px;
+    }
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        margin-top: 100px; 
+        font-family: 'Roboto regular';
+        display: none;
+    }
+    .msg-sucess{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        border-radius: 0;
+        
+        
+    }
+    .msg-sucess img{
+        width: 70px;
+        
+    }
+    .msg-sucess .msg-sucess-title{
+        max-width: 225px;
+        font-family: 'Roboto Bold';
+        font-size: 2.8125rem;
+        color: hsl(234, 29%, 20%);
+        margin-top: 40px;
+    }
+    .msg-sucess .msg-sucess-text{
+        font-family: 'Roboto Regular';
+        color: hsl(235, 18%, 26%);
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 200px;
+    }
+    .msg-sucess button{
+        width: 100%;
+        height: 50px;
+        border-radius: 8px;
+        background-color: hsl(234, 29%, 20%);
+        color: hsl(0, 0%, 100%);
+        font-family: 'Roboto Regular';
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+    }
+}
+
